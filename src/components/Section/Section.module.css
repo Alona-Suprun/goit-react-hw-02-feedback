@@ -1,0 +1,13 @@
+section {
+  text-align: center;
+  border: 2px solid orange;
+  border-radius: 5px;
+  width: 300px;
+  margin: auto;
+  background-color: rgb(255, 255, 233);
+  margin-bottom: 20px;
+}
+
+.title {
+  color: orange;
+}
