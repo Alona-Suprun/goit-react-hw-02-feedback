@@ -13,20 +13,24 @@ const Statistics = ({
   return total === 0 ? (
     <p className={s.text}>No feedback given</p>
   ) : (
-    <>
-      <p className={s.text}>Excellent: {excellent}</p>
-      <p className={s.text}>Good: {good}</p>
-      <p className={s.text}>Neutral: {neutral}</p>
-      <p className={s.text}>Bad: {bad}</p>
-      <p className={s.text}>Total: {total}</p>
-      <p className={s.text}>Positive feedback: {positiveFeedbacks}%</p>
-    </>
+    <ul>
+      <li className={s.text}>Excellent: {excellent}</li>
+      <li className={s.text}>Good: {good}</li>
+      <li className={s.text}>Neutral: {neutral}</li>
+      <li className={s.text}>Bad: {bad}</li>
+      <li className={s.text}>Total: {total}</li>
+      <li className={s.text}>Positive feedback: {positiveFeedbacks}%</li>
+    </ul>
   );
 };
 
 Statistics.propTypes = {
-  calculations: PropTypes.arrayOf(PropTypes.string),
-  calculation: PropTypes.number,
+  excellent: PropTypes.number,
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
 };
 
 export default Statistics;
