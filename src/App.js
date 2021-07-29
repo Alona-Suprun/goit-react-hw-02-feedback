@@ -13,12 +13,7 @@ class App extends Component {
   };
 
   handleFeedback = options => {
-    this.setState(
-      prevState => ({ [options]: prevState[options] + 1 }),
-      () => {
-        this.setState({ visible: true });
-      },
-    );
+    this.setState(prevState => ({ [options]: prevState[options] + 1 }));
   };
 
   countTotal = () => {
